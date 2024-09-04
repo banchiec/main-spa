@@ -1,0 +1,57 @@
+.klz-footer {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	background-color: #0a0a0a;
+	bottom: 0;
+	&-container {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.8rem 3.1rem 2.5rem 3.1rem;
+	}
+
+	&__contactme {
+		display: none;
+	}
+
+	&__social-media {
+		display: flex;
+		flex-direction: row;
+		&__icon {
+			padding-right: 1rem;
+		}
+		img {
+			width: 3.6rem;
+			height: 3.6rem;
+		}
+	}
+
+	@media (min-width: 860px) {
+		&-container {
+			padding: 1.3333rem 10.5778rem 1.5067rem 10.5778rem;
+		}
+		&__social-media {
+			img {
+				width: 46.16px;
+				height: 45.377px;
+				flex-shrink: 0;
+			}
+		}
+		&__contactme {
+			display: block;
+			h4 {
+				color: #fff;
+				font-family: 'Nunito Sans';
+				font-size: 22.222px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: 1.111px;
+			}
+		}
+	}
+}
