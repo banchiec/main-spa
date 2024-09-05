@@ -1,9 +1,9 @@
 import { BrowserRouter as Router } from "react-router-dom"
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { createRoot } from 'react-dom/client'
+import { DataProvider } from "./context/index.ts"
 import App from './App.tsx'
 import './index.css'
-import { DataProvider } from "./context/index.ts"
 
 const queryClient = new QueryClient({
   defaultOptions:  {
@@ -15,11 +15,11 @@ const queryClient = new QueryClient({
 })
 
 createRoot(document.getElementById('root')!).render(
-    <QueryClientProvider client={queryClient}>
-      <Router>
-        <DataProvider>
-          <App />
-        </DataProvider>
-      </Router>
-    </QueryClientProvider>
+  <QueryClientProvider client={queryClient}>
+    <Router>
+      <DataProvider>
+        <App />
+      </DataProvider>
+    </Router>
+  </QueryClientProvider>
 )

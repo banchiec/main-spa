@@ -1,9 +1,9 @@
 import { useCategoriesFinders } from "./categories/use-categories-finders"
 
 export const useMasterDataFinders = () => {
-	const categoriesFinder = useCategoriesFinders()
+	const categoriesFinders = useCategoriesFinders()
 
 	return {
-		...categoriesFinder
+		...categoriesFinders
 	}
 }
