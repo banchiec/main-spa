@@ -1,15 +1,13 @@
 import React from "react";
-import Header from "../header";
-import Footer from "../footer";
 import { Outlet } from "react-router-dom";
+import { CardProduct } from "../cards";
 
 const Layout: React.FC = ({ children }: React.PropsWithChildren) => {
 	return (
 		<div className="klz-layout">
-			<Header />
+			<CardProduct/>
 			<main>{children}</main>
 			<Outlet />
-			<Footer />
 		</div>
 	);
 }
